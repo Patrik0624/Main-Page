@@ -1,27 +1,201 @@
-* {
-  box-sizing: border-box;
+/*==========CSS RESET==========*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-.text {
-  height: 14rem;
-  margin-top: calc(50vh - 7rem);
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-h1 {
-  text-align: center;
-  font-family: Roboto;
-  font-weight: 400;
-  letter-spacing: 0.1rem;
+body {
+	line-height: 1;
 }
-img {
-  width: 10rem;
-  margin-left: -5rem;
-  position: absolute;
-  left: 50%;
+ol, ul {
+	list-style: none;
 }
-button {
-  width: 4rem;
-  margin-left: -2rem;
-  position: absolute;
-  top: calc(50vh + 8rem);
-  left: 50%;
-  display: none;
+blockquote, q {
+	quotes: none;
 }
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*==========OTHER==========*/
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Montserrat';
+  }
+  .content {
+    background-color: rgba(240,240,240,.5);
+  }
+/*==========HEADER==========*/
+  header {
+    width: 100%;
+    height: 60vh;
+    background: url(../assets/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: table;
+  }
+  header h1 {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 500;
+    background-color: rgba(0,0,0,.5);
+    padding: 2rem 0;
+    letter-spacing: 0.2rem;
+  }
+  .title {
+    display: table-cell;
+    vertical-align: middle;
+  }
+/*==========NAV==========*/
+  nav {
+    height: 5rem;
+    display: table;
+    padding-left: 10vw;
+  }
+  nav a {
+    color: black;
+    text-decoration: none;
+    width: 20vw;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    border-bottom: 2px solid white;
+    padding: 2rem 0;
+    display: table-cell;
+    text-align: center;
+  }
+  nav a:hover {
+    border-bottom: 2px solid blue;
+    transition: 0.2s ease-in-out;
+  }
+  nav a:not(:hover){
+    transition: 0.2s ease-in-out;
+  }
+  button:focus {
+    outline: none;
+  }
+/*==========INTRODUCTION==========*/
+  #introduction, #photos {
+    position: absolute;
+    top: 0;
+  }
+  .introduction {
+    padding: 2rem 5rem;
+    width: 70vw;
+    margin: auto;
+    position: relative;
+  }
+  .introduction h2, .photos h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: 0.1rem;
+  }
+  .introduction p {
+    text-align: center;
+    line-height: 1.2rem;
+  }
+  .introduction img {
+    width: 10rem;
+    border-radius: 50%;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    margin-left: calc(35vw - 10rem);
+  }
+  .introduction::after{
+    content: "";
+    display: block;
+    width: 20vw;
+    height: 2px;
+    background-color: rgb(10,10,10);
+    position: absolute;
+    left: 50%;
+    margin-left: -10vw;
+  }
+/*==========PHOTOS==========*/
+  .photos {
+    position: relative;
+    padding-top: 1rem;
+  }
+  .pictures {
+    width: 37rem;
+    margin: auto;
+  }
+  .photos img {
+    width: 10rem;
+    margin: 1rem;
+  }
+  .photos img:hover {
+    width: 11rem;
+    transition: 0.3s ease-in-out;
+    margin: 0.5rem;
+  }
+  .photos img:not(:hover){
+    transition: 0.3s ease-in-out;
+  }
+/*==========MEDIA QUERY==========*/
+  @media screen and (min-width: 1350px) {
+    header h1 {
+      font-size: 3rem;
+    }
+    nav a {
+      width: 15vw;
+    }
+    nav {
+      padding-left: 20vw;
+    }
+    .introduction {
+      width: 60vw;
+    }
+    .introduction h2, .photos h2 {
+      font-size: 1.7rem;
+    }
+    .introduction p {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+    .introduction img {
+      margin-left: calc(30vw - 10rem);
+    }
+    .pictures {
+      width: 61rem;
+    }
+    .photos img {
+      width: 13rem;
+    }
+    .photos img:hover {
+      width: 14rem;
+      transition: 0.3s ease-in-out;
+      margin: 0.5rem;
+    }
+  }
