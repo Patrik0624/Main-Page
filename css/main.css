@@ -168,15 +168,15 @@ table {
 		padding-bottom: 2rem;
   }
   .pictures {
-    width: 46rem;
+    width: calc(75vw + 7rem);
     margin: auto;
   }
   .photos img {
-    width: 13rem;
+    width: 25vw;
     margin: 1rem;
   }
   .photos img:hover {
-    width: 14rem;
+    width: calc(25vw + 1rem);
     transition: 0.3s ease-in-out;
     margin: 0.5rem;
   }
@@ -185,10 +185,10 @@ table {
   }
 /*==========VIDEOS==========*/
 	iframe {
-		width: 50vw;
-		height: 28vw;
+		width: 70vw;
+		height: 39vw;
 		margin: 1rem 0;
-		margin-left: 25vw;
+		margin-left: 15vw;
 	}
 /*==========MEDIA QUERY==========*/
 	@media screen and (min-width: 1000px) {
@@ -235,6 +235,12 @@ table {
 			right: 1rem;
 			bottom: 1rem;
 			font-size: 2rem;
+			padding: 0;
+		}
+		iframe {
+			width: 50vw;
+			height: 28vw;
+			margin-left: 25vw;
 		}
 	}
   @media screen and (min-width: 1350px) {
