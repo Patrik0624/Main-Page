@@ -66,7 +66,7 @@ table {
 		font-size: 3rem;
 		padding: calc(5vw - 3rem);
 	}
-	#introduction, #photos, #video {
+	#introduction, #photos, #videos {
     position: absolute;
     top: 0;
   }
@@ -277,6 +277,9 @@ table {
       transition: 0.3s ease-in-out;
       margin: 0.5rem;
     }
+		.last {
+			display: none;
+		}
 		iframe {
 			width: 35vw;
 			height: 20vw;
