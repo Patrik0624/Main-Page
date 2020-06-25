@@ -64,8 +64,32 @@ table {
 		cursor: pointer;
 		display: none;
 		font-size: 3rem;
-		text-align: center;
+		padding: calc(5vw - 3rem);
 	}
+	#introduction, #photos, #video {
+    position: absolute;
+    top: 0;
+  }
+	.introduction h2, .photos h2, .video h2 {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: 0.1rem;
+		margin-top: 1rem;
+  }
+	.introduction::after, .photos::after {
+    content: "";
+    display: block;
+    width: 20vw;
+    height: 2px;
+    background-color: rgb(10,10,10);
+    position: absolute;
+    left: 50%;
+    margin-left: -10vw;
+		margin-top: 2rem;
+  }
 /*==========HEADER==========*/
   header {
     width: 100%;
@@ -120,23 +144,11 @@ table {
     outline: none;
   }
 /*==========INTRODUCTION==========*/
-  #introduction, #photos {
-    position: absolute;
-    top: 0;
-  }
   .introduction {
     padding: 2rem 5rem;
     width: 100%;
     margin: auto;
     position: relative;
-  }
-  .introduction h2, .photos h2 {
-    text-align: center;
-    font-size: 1.7rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    letter-spacing: 0.1rem;
   }
   .introduction p {
     text-align: center;
@@ -147,23 +159,13 @@ table {
     width: 12rem;
     border-radius: 50%;
     margin-top: 2rem;
-    margin-bottom: 3rem;
     margin-left: calc(50% - 6rem);
   }
-  .introduction::after{
-    content: "";
-    display: block;
-    width: 20vw;
-    height: 2px;
-    background-color: rgb(10,10,10);
-    position: absolute;
-    left: 50%;
-    margin-left: -10vw;
-  }
 /*==========PHOTOS==========*/
-  .photos {
+  .photos, .video {
     position: relative;
     padding-top: 1rem;
+		padding-bottom: 2rem;
   }
   .pictures {
     width: 46rem;
@@ -181,6 +183,13 @@ table {
   .photos img:not(:hover){
     transition: 0.3s ease-in-out;
   }
+/*==========VIDEOS==========*/
+	iframe {
+		width: 50vw;
+		height: 28vw;
+		margin: 1rem 0;
+		margin-left: 25vw;
+	}
 /*==========MEDIA QUERY==========*/
 	@media screen and (min-width: 1000px) {
 		header {
@@ -221,8 +230,8 @@ table {
 			width: 11rem;
 		}
 		.scrollbutton {
-			width: 7vw;
-			height: 7vw;
+			width: 5rem;
+			height: 5rem;
 			right: 1rem;
 			bottom: 1rem;
 			font-size: 2rem;
@@ -262,4 +271,9 @@ table {
       transition: 0.3s ease-in-out;
       margin: 0.5rem;
     }
+		iframe {
+			width: 35vw;
+			height: 20vw;
+			margin-left: 32.5vw;
+		}
   }
