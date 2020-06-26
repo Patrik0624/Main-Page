@@ -48,10 +48,12 @@ table {
   }
   body {
     font-family: 'Montserrat';
-		color: rgb(20,20,20)
+		color: rgb(20,20,20);
+		position: relative;
   }
   .content {
     background-color: rgba(240,240,240,.5);
+		padding-top: 86px;
   }
 	.scrollbutton {
 		width: 10vw;
@@ -94,7 +96,7 @@ table {
   }
 	#introduction, #photos, #videos, #contact {
 		position: absolute;
-		top: 2px;
+		top: -83px;
 	}
 /*==========HEADER==========*/
   header {
@@ -122,10 +124,13 @@ table {
   }
 /*==========NAV==========*/
   nav {
-    height: 5.4rem;
+    height: 86px;
 		padding-left: 4vw;
+		padding-right: 4vw;
 		display: table;
 		background-color: white;
+		position: absolute;
+		width: 100%;
   }
   nav a {
     text-decoration: none;
@@ -140,15 +145,25 @@ table {
 		cursor: pointer;
   }
   nav a:hover {
-    border-bottom: 2px solid blue;
-    transition: 0.2s ease-in-out;
+    color: rgb(120,120,120);
+		transition: 0.1s ease-in-out;
   }
   nav a:not(:hover){
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
   }
   button:focus {
     outline: none;
   }
+	.current {
+		border-bottom: 2px solid blue;
+	}
+	.shrink {
+		position: fixed;
+    top: 0;
+    transition: .8s all;
+    opacity: .95;
+		width: 100%;
+	}
 /*==========INTRODUCTION==========*/
   .introduction {
     padding: 2rem 5rem;
@@ -233,6 +248,7 @@ table {
 		}
 		nav {
 			padding-left: 10vw;
+			padding-right: 10vw;
 		}
 		nav a {
 			width: 20vw;
@@ -287,6 +303,7 @@ table {
     }
     nav {
       padding-left: 20vw;
+			padding-right: 20vw;
     }
     .introduction {
       width: 60vw;
