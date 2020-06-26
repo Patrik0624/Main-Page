@@ -48,6 +48,7 @@ table {
   }
   body {
     font-family: 'Montserrat';
+		color: rgb(20,20,20)
   }
   .content {
     background-color: rgba(240,240,240,.5);
@@ -66,11 +67,7 @@ table {
 		font-size: 3rem;
 		padding: calc(5vw - 3rem);
 	}
-	#introduction, #photos, #videos {
-    position: absolute;
-    top: 0;
-  }
-	.introduction h2, .photos h2, .video h2 {
+	.introduction h2, .photos h2, .video h2, .contact h2 {
     text-align: center;
     font-size: 1.7rem;
     font-weight: 500;
@@ -79,7 +76,7 @@ table {
     letter-spacing: 0.1rem;
 		margin-top: 1rem;
   }
-	.introduction::after, .photos::after {
+	.introduction::after, .photos::after, .videos::after {
     content: "";
     display: block;
     width: 20vw;
@@ -90,6 +87,15 @@ table {
     margin-left: -10vw;
 		margin-top: 2rem;
   }
+	.photos, .video, .contact {
+    position: relative;
+    padding-top: 1rem;
+		padding-bottom: 2rem;
+  }
+	#introduction, #photos, #videos, #contact {
+		position: absolute;
+		top: 2px;
+	}
 /*==========HEADER==========*/
   header {
     width: 100%;
@@ -122,7 +128,6 @@ table {
 		background-color: white;
   }
   nav a {
-    color: black;
     text-decoration: none;
     width: 24vw;
     font-size: 1.3rem;
@@ -132,6 +137,7 @@ table {
     padding: 2rem 0;
     display: table-cell;
     text-align: center;
+		cursor: pointer;
   }
   nav a:hover {
     border-bottom: 2px solid blue;
@@ -162,11 +168,6 @@ table {
     margin-left: calc(50% - 6rem);
   }
 /*==========PHOTOS==========*/
-  .photos, .video {
-    position: relative;
-    padding-top: 1rem;
-		padding-bottom: 2rem;
-  }
   .pictures {
     width: calc(75vw + 7rem);
     margin: auto;
@@ -189,6 +190,37 @@ table {
 		height: 39vw;
 		margin: 1rem 0;
 		margin-left: 15vw;
+	}
+/*==========CONTACT==========*/
+	.icons {
+		width: 25rem;
+		margin: auto;
+	}
+  .icons i {
+		color: rgb(20,20,20);
+		font-size: 4rem;
+		margin: 1rem 2rem;
+	}
+	.icons i:hover {
+		color: rgb(80,80,80);
+		transition: 0.1s ease-in-out;
+	}
+	.icons i:not(:hover) {
+		transition: 0.1s ease-in-out;
+	}
+/*==========FOOTER==========*/
+	footer {
+		background-color: rgb(20,20,20);
+		height: 7rem;
+		width: 100%;
+		color: white;
+		display: table;
+	}
+	footer p {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		font-size: 1.3rem;
 	}
 /*==========MEDIA QUERY==========*/
 	@media screen and (min-width: 1000px) {
@@ -241,6 +273,9 @@ table {
 			width: 50vw;
 			height: 28vw;
 			margin-left: 25vw;
+		}
+		footer p {
+			font-size: 1rem;
 		}
 	}
   @media screen and (min-width: 1350px) {
