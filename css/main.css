@@ -202,7 +202,7 @@ table {
 		margin: 1rem 2rem;
 	}
 	.icons i:hover {
-		color: rgb(80,80,80);
+		color: rgb(85,85,85);
 		transition: 0.1s ease-in-out;
 	}
 	.icons i:not(:hover) {
