@@ -116,6 +116,7 @@ table {
 		left: calc(50% - 15rem);
 		display: none;
 		border: 1px solid black;
+		z-index: 5;
 	}
 /*==========HEADER==========*/
   header {

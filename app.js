@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.caution').delay(500).fadeOut('slow');
+  $('.caution').delay(500).fadeIn('slow');
   $('body').click(function(){
     $('.caution').fadeOut('slow');
   });
