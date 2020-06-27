@@ -1,8 +1,9 @@
 $(document).ready(function(){
-  $('.caution').delay(500).fadeIn('slow');
+  $('.caution').delay(500).fadeOut('slow');
   $('body').click(function(){
     $('.caution').fadeOut('slow');
   });
+
   window.onscroll = function() {scrollFunction()};
   function scrollFunction() {
     var scrollHeight = $(document).height();
@@ -55,4 +56,14 @@ $(document).ready(function(){
   $('#contactButton, #contactButton1').click(function(){
     $("html, body").animate({scrollTop: $("#contact").offset().top}, "slow");
   });
+});
+
+$(document).ready(function looper() {
+    $('#bg1').css('right', '-100%');
+    $('#bg2').css('right', '-100%');
+    $('#bg3').css('right', '-100%');
+    $('#bg1').animate({right: '0'}, 'slow');
+    $('#bg2').delay(4000).animate({right: '0'}, 'slow');
+    $('#bg3').delay(8000).animate({right: '0'}, 'slow');
+    setTimeout(looper,12000)
 });

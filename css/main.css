@@ -52,7 +52,7 @@ table {
 		position: relative;
   }
   .content {
-    background-color: rgba(240,240,240,.5);
+		background-color: rgba(249,249,249);
 		padding-top: 86px;
   }
 	.scrollbutton {
@@ -122,8 +122,6 @@ table {
     width: 100%;
     height: 30vh;
     display: table;
-		background: url('../assets/bg.jpg') no-repeat center center;
-		background-size: cover;
   }
   header h1 {
     color: white;
@@ -141,6 +139,18 @@ table {
     display: table-cell;
     vertical-align: middle;
   }
+	#bg1, #bg2, #bg3, #bg3cpy {
+		width: 100%;
+		height: 56vw;
+		margin-top: -10vw;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: -1;
+	}
+	#bg3cpy {
+		z-index: -2;
+	}
 /*==========NAV==========*/
   nav {
     height: 86px;
@@ -150,6 +160,7 @@ table {
 		background-color: white;
 		position: absolute;
 		width: 100%;
+		z-index: 2;
   }
   nav a {
     text-decoration: none;
@@ -183,6 +194,7 @@ table {
     width: 100%;
     margin: auto;
     position: relative;
+		z-index: 2;
   }
   .introduction img {
     width: 12rem;
