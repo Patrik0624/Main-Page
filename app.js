@@ -62,8 +62,20 @@ $(document).ready(function looper() {
     $('#bg1').css('right', '-100%');
     $('#bg2').css('right', '-100%');
     $('#bg3').css('right', '-100%');
-    $('#bg1').animate({right: '0'}, 'slow');
-    $('#bg2').delay(4000).animate({right: '0'}, 'slow');
-    $('#bg3').delay(8000).animate({right: '0'}, 'slow');
+    $('#bg1').animate({right: '0'}, 600);
+    setTimeout(function(){
+      $('.point1').addClass('currentpoint');
+      $('.point3').removeClass('currentpoint');
+    }, 300);
+    $('#bg2').delay(4000).animate({right: '0'}, 600);
+    setTimeout(function(){
+      $('.point2').addClass('currentpoint');
+      $('.point1').removeClass('currentpoint');
+    }, 4300);
+    $('#bg3').delay(8000).animate({right: '0'}, 600);
+    setTimeout(function(){
+      $('.point3').addClass('currentpoint');
+      $('.point2').removeClass('currentpoint');
+    }, 8300);
     setTimeout(looper,12000)
 });

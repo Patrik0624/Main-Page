@@ -117,12 +117,14 @@ table {
 		display: none;
 		border: 1px solid black;
 		z-index: 5;
+		opacity: 0.9;
 	}
 /*==========HEADER==========*/
   header {
     width: 100%;
-    height: 30vh;
-    display: table;
+		height: 30vh;
+		display: table;
+		position: relative;
   }
   header h1 {
     color: white;
@@ -137,12 +139,12 @@ table {
 		padding: 2rem 1rem;
   }
   .title {
-    display: table-cell;
+		display: table-cell;
     vertical-align: middle;
   }
 	#bg1, #bg2, #bg3, #bg3cpy {
 		width: 100%;
-		max-height: 30vh;
+		height: 30vh;
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -150,6 +152,29 @@ table {
 	}
 	#bg3cpy {
 		z-index: -2;
+	}
+	.points {
+		position: absolute;
+		height: 1.8rem;
+		padding: 0.2rem;
+		bottom: 1rem;
+		left: 50%;
+		margin-left: -2.1rem;
+		background-color: rgba(250,250,250,.7);
+		border-radius: 50px;
+	}
+	.point1, .point2, .point3 {
+		background-color: rgb(40,40,40);
+		width: 1rem;
+		height: 1rem;
+		border-radius: 50%;
+		display: inline-block;
+		margin: 0.2rem;
+	}
+	.currentpoint {
+		background-color: white;
+		border: 2px solid rgb(40,40,40);
+		transition: 0.3s ease-in-out;
 	}
 /*==========NAV==========*/
   nav {
@@ -244,7 +269,7 @@ table {
 /*==========MEDIA QUERY==========*/
 	@media screen and (min-width: 650px) {
 		#bg1, #bg2, #bg3, #bg3cpy {
-			max-height: none;
+			min-height: none;
 			height: 56vw;
 			margin-top: -10vw;
 		}
