@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  $('.caution').delay(500).fadeIn('slow');
+  $('body').click(function(){
+    $('.caution').fadeOut('slow');
+  });
   window.onscroll = function() {scrollFunction()};
   function scrollFunction() {
     var scrollHeight = $(document).height();

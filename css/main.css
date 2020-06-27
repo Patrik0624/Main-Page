@@ -69,7 +69,7 @@ table {
 		font-size: 3rem;
 		padding: calc(5vw - 3rem);
 	}
-	.introduction h2, .photos h2, .video h2, .contact h2 {
+	h2 {
     text-align: center;
     font-size: 1.7rem;
     font-weight: 500;
@@ -97,6 +97,25 @@ table {
 	#introduction, #photos, #videos, #contact {
 		position: absolute;
 		top: -83px;
+	}
+	p {
+    text-align: center;
+    line-height: 2rem;
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+		padding: 0 5rem;
+  }
+	a {
+		text-decoration: none;
+	}
+	.caution {
+		width: 30rem;
+		height: 39rem;
+		position: fixed;
+		top: calc(50% - 19.5rem);
+		left: calc(50% - 15rem);
+		display: none;
+		border: 1px solid black;
 	}
 /*==========HEADER==========*/
   header {
@@ -138,7 +157,7 @@ table {
     font-size: 1.3rem;
     letter-spacing: 0.1rem;
     font-weight: 500;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgba(0,0,0,.0);
     padding: 2rem 0;
     display: table-cell;
     text-align: center;
@@ -160,24 +179,18 @@ table {
 	}
 /*==========ABOUT ME==========*/
   .introduction {
-    padding: 2rem 5rem;
+    padding: 2rem 0;
     width: 100%;
     margin: auto;
     position: relative;
   }
-  .introduction p {
-    text-align: center;
-    line-height: 1.8rem;
-		font-size: 1.5rem;
-  }
   .introduction img {
     width: 12rem;
     border-radius: 50%;
-    margin-top: 2rem;
     margin-left: calc(50% - 6rem);
   }
 /*==========PHOTOS==========*/
-  .pictures {
+	.pictures {
     width: calc(75vw + 7rem);
     margin: auto;
   }
@@ -188,7 +201,7 @@ table {
 /*==========VIDEOS==========*/
 	iframe {
 		width: 70vw;
-		height: 39vw;
+		height: 39.5vw;
 		margin: 1rem 0;
 		margin-left: 15vw;
 	}
@@ -200,14 +213,7 @@ table {
   .icons i {
 		color: rgb(20,20,20);
 		font-size: 4rem;
-		margin: 1rem 2rem;
-	}
-	.icons i:hover {
-		color: rgb(85,85,85);
-		transition: 0.1s ease-in-out;
-	}
-	.icons i:not(:hover) {
-		transition: 0.1s ease-in-out;
+		margin: 0 2rem 1rem;
 	}
 /*==========FOOTER==========*/
 	footer {
@@ -240,18 +246,16 @@ table {
 			width: 20vw;
 			font-size: 1.1rem;
 		}
-		.introduction {
-			width: 70vw;
-		}
 		.introduction h2, .photos h2 {
 			font-size: 1.5rem;
 		}
-		.introduction p {
+		p {
 			font-size: 1rem;
-			line-height: 1.2rem;
+			line-height: 1.5rem;
+			padding: 0 15rem;
 		}
 		.introduction img {
-			margin-left: calc(35vw - 10rem);
+			margin-left: calc(50% - 5rem);
 			width: 10rem;
 		}
 		.pictures {
@@ -259,9 +263,6 @@ table {
 		}
 		.photos img {
 			width: 10rem;
-		}
-		.photos img:hover {
-			width: 11rem;
 		}
 		.scrollbutton {
 			width: 5rem;
@@ -280,20 +281,27 @@ table {
 			font-size: 1rem;
 		}
 		nav a:hover {
-	    color: rgb(120,120,120);
-			transition: 0.1s ease-in-out;
+	    background-color: rgb(240,240,240);
+			transition: 0.2s ease-in-out;
 	  }
 	  nav a:not(:hover){
-	    transition: 0.1s ease-in-out;
+	    transition: 0.2s ease-in-out;
 	  }
 		.photos img:hover {
-	    width: calc(25vw + 1rem);
+	    width: 11rem;
 	    transition: 0.3s ease-in-out;
 	    margin: 0.5rem;
 	  }
 	  .photos img:not(:hover){
 	    transition: 0.3s ease-in-out;
 	  }
+		.icons i:hover {
+			color: rgb(100,100,100);
+			transition: 0.1s ease-in-out;
+		}
+		.icons i:not(:hover) {
+			transition: 0.1s ease-in-out;
+		}
 	}
   @media screen and (min-width: 1350px) {
     header h1 {
@@ -306,18 +314,13 @@ table {
       padding-left: 20vw;
 			padding-right: 20vw;
     }
-    .introduction {
-      width: 60vw;
-    }
     .introduction h2, .photos h2 {
       font-size: 1.7rem;
     }
-    .introduction p {
+    p {
       font-size: 1.2rem;
-      line-height: 1.4rem;
-    }
-    .introduction img {
-      margin-left: calc(30vw - 10rem);
+      line-height: 1.7rem;
+			padding: 0 35rem;
     }
     .pictures {
       width: 61rem;
@@ -335,7 +338,7 @@ table {
 		}
 		iframe {
 			width: 35vw;
-			height: 20vw;
+			height: 19.7vw;
 			margin-left: 32.5vw;
 		}
   }
