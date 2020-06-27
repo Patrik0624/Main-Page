@@ -122,7 +122,7 @@ table {
 /*==========HEADER==========*/
   header {
     width: 100%;
-		height: 30vh;
+		height: 20vh;
 		display: table;
 		position: relative;
   }
@@ -144,7 +144,7 @@ table {
   }
 	#bg1, #bg2, #bg3, #bg3cpy {
 		width: 100%;
-		height: 30vh;
+		height: 20vh;
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -267,6 +267,14 @@ table {
 		font-size: 1.3rem;
 	}
 /*==========MEDIA QUERY==========*/
+@media screen and (min-width: 500px) {
+	#bg1, #bg2, #bg3, #bg3cpy {
+		min-height: none;
+		height: 30vh;
+	}
+	header {
+		height: 30vh;
+	}
 	@media screen and (min-width: 650px) {
 		#bg1, #bg2, #bg3, #bg3cpy {
 			min-height: none;
