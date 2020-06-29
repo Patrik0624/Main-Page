@@ -13,6 +13,7 @@
 		nav a {
 			width: 20vw;
 			font-size: 1.1rem;
+      font-weight: 500;
 		}
 		.introduction h2, .photos h2 {
 			font-size: 1.5rem;
@@ -77,8 +78,10 @@
 		h2::after {
 			width: 5rem;
 			margin-left: -2.5rem;
-      height: 3px;
 		}
+    .current {
+      border-bottom: 2px solid blue;
+    }
 	}
   @media screen and (min-width: 1350px) {
     header h1 {

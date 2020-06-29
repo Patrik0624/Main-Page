@@ -82,7 +82,7 @@ table {
     content: "";
     display: block;
     width: 8rem;
-    height: 4px;
+    height: 3px;
     background-color: rgb(10,10,10);
     position: absolute;
     left: 50%;
@@ -109,17 +109,6 @@ table {
 	a {
 		text-decoration: none;
 		color: #0000CD;
-	}
-	.caution {
-		width: 30rem;
-		height: 39rem;
-		position: fixed;
-		top: calc(50% - 19.5rem);
-		left: calc(50% - 15rem);
-		display: none;
-		border: 1px solid black;
-		z-index: 5;
-		opacity: 0.9;
 	}
 /*==========HEADER==========*/
   header {
@@ -194,7 +183,6 @@ table {
     width: 24vw;
     font-size: 1.6rem;
     letter-spacing: 0.1rem;
-    font-weight: 500;
     border-bottom: 2px solid rgba(0,0,0,.0);
     padding: 2rem 0;
     display: table-cell;
@@ -206,7 +194,7 @@ table {
     outline: none;
   }
 	.current {
-		border-bottom: 2px solid blue;
+		border-bottom: 3px solid blue;
 		transition: 0.3s ease-in-out;
 	}
 	.shrink {
@@ -272,7 +260,7 @@ table {
 /*==========FOOTER==========*/
 	footer {
 		background-color: rgb(20,20,20);
-		height: 10rem;
+		height: 15rem;
 		width: 100%;
 		color: white;
 		display: table;
@@ -281,6 +269,7 @@ table {
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;
-		font-size: 1.3rem;
+		font-size: 1.5rem;
 		color: rgb(230,230,230);
+		line-height: 2rem;
 	}
