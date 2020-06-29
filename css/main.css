@@ -72,27 +72,27 @@ table {
 	h2 {
     text-align: center;
     font-size: 1.7rem;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     letter-spacing: 0.1rem;
 		margin-top: 1rem;
   }
-	.introduction::after, .photos::after, .videos::after {
+	h2::after {
     content: "";
     display: block;
-    width: 20vw;
-    height: 2px;
+    width: 8rem;
+    height: 4px;
     background-color: rgb(10,10,10);
     position: absolute;
     left: 50%;
-    margin-left: -10vw;
-		margin-top: 2rem;
+    margin-left: -4rem;
+		margin-top: 1rem;
   }
 	.photos, .video, .contact {
     position: relative;
     padding-top: 1rem;
-		padding-bottom: 2rem;
+		padding-bottom: 1rem;
   }
 	#introduction, #photos, #videos, #contact {
 		position: absolute;
@@ -104,9 +104,11 @@ table {
 		font-size: 1.5rem;
 		margin-bottom: 2rem;
 		padding: 0 5rem;
+		color: rgb(50,50,50);
   }
 	a {
 		text-decoration: none;
+		color: #0000CD;
 	}
 	.caution {
 		width: 30rem;
@@ -190,7 +192,7 @@ table {
   nav a {
     text-decoration: none;
     width: 24vw;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     letter-spacing: 0.1rem;
     font-weight: 500;
     border-bottom: 2px solid rgba(0,0,0,.0);
@@ -198,6 +200,7 @@ table {
     display: table-cell;
     text-align: center;
 		cursor: pointer;
+		color: rgb(20,20,20);
   }
   button:focus {
     outline: none;
@@ -242,20 +245,34 @@ table {
 		margin: 1rem 0;
 		margin-left: 15vw;
 	}
-/*==========CONTACT ME==========*/
+/*==========CONTACT==========*/
+	.contact {
+		padding-bottom: 10vh;
+	}
 	.icons {
-		width: 25rem;
+		width: 29.5rem;
 		margin: auto;
 	}
   .icons i {
 		color: rgb(20,20,20);
 		font-size: 4rem;
+	}
+	.instagram, .youtube, .facebook {
+		display: inline-block;
+		width: 5.5rem;
+		height: 5.5rem;
 		margin: 0 2rem 1rem;
+		padding-top: 0.75rem;
+		padding-left: 1rem;
+		border-radius: 25%;
+	}
+	.youtube {
+		padding-left: 0.55rem;
 	}
 /*==========FOOTER==========*/
 	footer {
 		background-color: rgb(20,20,20);
-		height: 7rem;
+		height: 10rem;
 		width: 100%;
 		color: white;
 		display: table;
@@ -265,116 +282,5 @@ table {
 		vertical-align: middle;
 		text-align: center;
 		font-size: 1.3rem;
+		color: rgb(230,230,230);
 	}
-/*==========MEDIA QUERY==========*/
-	@media screen and (min-width: 1000px) {
-		header {
-			height: 60vh;
-		}
-		header h1 {
-			font-size: 2.3rem;
-		}
-		nav {
-			padding-left: 10vw;
-			padding-right: 10vw;
-		}
-		nav a {
-			width: 20vw;
-			font-size: 1.1rem;
-		}
-		.introduction h2, .photos h2 {
-			font-size: 1.5rem;
-		}
-		p {
-			font-size: 1rem;
-			line-height: 1.5rem;
-			padding: 0 15rem;
-		}
-		.introduction img {
-			margin-left: calc(50% - 5rem);
-			width: 10rem;
-		}
-		.pictures {
-			width: 37rem;
-		}
-		.photos img {
-			width: 10rem;
-		}
-		.scrollbutton {
-			width: 5rem;
-			height: 5rem;
-			right: 1rem;
-			bottom: 1rem;
-			font-size: 2rem;
-			padding: 0;
-		}
-		iframe {
-			width: 50vw;
-			height: 28vw;
-			margin-left: 25vw;
-		}
-		footer p {
-			font-size: 1rem;
-		}
-		nav a:hover {
-	    background-color: rgb(240,240,240);
-			transition: 0.2s ease-in-out;
-	  }
-	  nav a:not(:hover){
-	    transition: 0.2s ease-in-out;
-	  }
-		.photos img:hover {
-	    width: 11rem;
-	    transition: 0.3s ease-in-out;
-	    margin: 0.5rem;
-	  }
-	  .photos img:not(:hover){
-	    transition: 0.3s ease-in-out;
-	  }
-		.icons i:hover {
-			color: rgb(100,100,100);
-			transition: 0.1s ease-in-out;
-		}
-		.icons i:not(:hover) {
-			transition: 0.1s ease-in-out;
-		}
-	}
-  @media screen and (min-width: 1350px) {
-    header h1 {
-      font-size: 3rem;
-    }
-    nav a {
-      width: 15vw;
-    }
-    nav {
-      padding-left: 20vw;
-			padding-right: 20vw;
-    }
-    .introduction h2, .photos h2 {
-      font-size: 1.7rem;
-    }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.7rem;
-			padding: 0 35rem;
-    }
-    .pictures {
-      width: 61rem;
-    }
-    .photos img {
-      width: 13rem;
-    }
-    .photos img:hover {
-      width: 14rem;
-      transition: 0.3s ease-in-out;
-      margin: 0.5rem;
-    }
-		.last {
-			display: none;
-		}
-		iframe {
-			width: 35vw;
-			height: 19.7vw;
-			margin-left: 32.5vw;
-		}
-  }
