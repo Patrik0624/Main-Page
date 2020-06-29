@@ -3,6 +3,7 @@ $(document).ready(function(){
   function scrollFunction() {
     var scrollHeight = $(document).height();
     var scrollPosition = $(window).height() + $(window).scrollTop();
+
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
       $('.scrollbutton').fadeIn();
     } else {
@@ -28,6 +29,7 @@ $(document).ready(function(){
     } else {
       $('#videosButton1').removeClass('current');
     };
+    
     $(window).on("scroll", function() {
 	     if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
 	        $('#contactButton1').addClass("current");
@@ -36,6 +38,7 @@ $(document).ready(function(){
         };
     });
   };
+
   $('.scrollbutton').click(function(){
     $("html, body").animate({scrollTop: 0}, "slow");
   });
