@@ -67,12 +67,12 @@
 		footer {
 			height: 7rem;
 		}
-		.instagram:hover, .youtube:hover, .facebook:hover {
+		.instagram:hover, .youtube:hover, .facebook:hover, .github:hover {
 			background-color: rgb(230,230,230);
 			border-radius: 50%;
 			transition: 0.2s ease-in-out;
 		}
-		.instagram:not(:hover), .youtube:not(:hover), .facebok:not(:hover){
+		.instagram:not(:hover), .youtube:not(:hover), .facebok:not(:hover), .github:not(:hover){
 			transition: 0.2s ease-in-out;
 		}
 		h2::after {

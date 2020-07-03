@@ -29,7 +29,7 @@ $(document).ready(function(){
     } else {
       $('#videosButton1').removeClass('current');
     };
-    
+
     $(window).on("scroll", function() {
 	     if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
 	        $('#contactButton1').addClass("current");

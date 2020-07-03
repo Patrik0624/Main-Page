@@ -238,14 +238,14 @@ table {
 		padding-bottom: 10vh;
 	}
 	.icons {
-		width: 29.5rem;
+		width: calc(5.5rem * 4 + 2rem * 9);
 		margin: auto;
 	}
   .icons i {
 		color: rgb(20,20,20);
 		font-size: 4rem;
 	}
-	.instagram, .youtube, .facebook {
+	.instagram, .youtube, .facebook, .github {
 		display: inline-block;
 		width: 5.5rem;
 		height: 5.5rem;
@@ -256,6 +256,9 @@ table {
 	}
 	.youtube {
 		padding-left: 0.55rem;
+	}
+	.github {
+		padding-left: 0.8rem;
 	}
 /*==========FOOTER==========*/
 	footer {
