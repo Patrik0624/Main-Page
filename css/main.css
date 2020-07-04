@@ -168,7 +168,7 @@ table {
 		transition: 0.3s ease-in-out;
 	}
 	.clock {
-		color: black;
+		color: rgba(0,0,0,.8);
 		position: absolute;
 		top: 1rem;
 		left: 1rem;

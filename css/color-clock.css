@@ -18,8 +18,8 @@ a {
   color: rgba(250,250,250,.8);
   font-size: 3rem;
   position: absolute;
-  margin-top: 3rem;
-  margin-left: 1rem;
+  top: 1rem;
+  left: 1rem;
 }
 @media screen and (min-width: 768px) {
   a:hover {
