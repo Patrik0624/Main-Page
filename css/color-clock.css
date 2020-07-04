@@ -15,16 +15,20 @@ html, body {
   color: white;
 }
 a {
-  font-family: 'Exo 2', sans-serif;
-  color: black;
-  font-weight: 600;
-  font-size: 1.5rem;
-  display: block;
-  text-decoration: none;
+  color: rgba(250,250,250,.8);
+  font-size: 4rem;
+  position: absolute;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
 }
-.backtomenu {
-  padding: 1rem;
-  width: 12rem;
-  background-color: rgba(250,250,250,.3);
-  border-bottom-right-radius: 10px;
+@media screen and (min-width: 768px) {
+  a:hover {
+    font-size: 4.5rem;
+    margin-top: 1.25rem;
+    margin-left: 0.75rem;
+    transition: 0.1s ease-in-out;
+  }
+  a:not(:hover) {
+    transition: 0.1s ease-in-out;
+  }
 }
