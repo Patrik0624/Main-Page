@@ -6,6 +6,18 @@
 		header h1 {
 			font-size: 2.3rem;
 		}
+		.clock {
+			font-size: 3rem;
+		}
+		.clock:hover {
+			font-size: 3.5rem;
+			top: 0.75rem;
+			left: 0.75rem;
+			transition: 0.1s ease-in-out;
+		}
+		.clock:not(:hover) {
+			transition: 0.1s ease-in-out;
+		}
 		nav {
 			padding-left: 10vw;
 			padding-right: 10vw;

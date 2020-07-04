@@ -167,6 +167,13 @@ table {
 		border: 2px solid rgb(40,40,40);
 		transition: 0.3s ease-in-out;
 	}
+	.clock {
+		color: black;
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		font-size: 5rem;
+	}
 /*==========NAVBAR==========*/
   nav {
     height: 86px;
