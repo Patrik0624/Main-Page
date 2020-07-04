@@ -24,8 +24,8 @@ a {
 @media screen and (min-width: 768px) {
   a:hover {
     font-size: 3.5rem;
-    margin-top: 2.75rem;
-    margin-left: 0.75rem;
+    top: 0.75rem;
+    left: 0.75rem;
     transition: 0.1s ease-in-out;
   }
   a:not(:hover) {
