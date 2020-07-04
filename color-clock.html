@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Color Clock</title>
+<style id="jsbin-css">
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+
+#clock {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 68px;
+  margin-top: -34px;
+  color: white;
+}
+</style>
+</head>
+<body>
+  <div id="clock">12:13:14</div>
+<script id="jsbin-javascript">
+function colorClock(){
+  var date = new Date();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var seconds = date.getSeconds();
+
+  if (hours <= 9) {
+    hours = '0' + hours;
+  }
+  if (minutes <= 9) {
+    minutes = '0' + minutes;
+  }
+  if (seconds <= 9) {
+    seconds = '0' + seconds;
+  }
+
+  var clockFace = hours + ':' + minutes + ':' + seconds;
+
+  document.getElementById('clock').innerHTML = clockFace;
+
+ setTimeout(function() {
+  colorClock();
+}, 1000);
+
+  var hexColor = '#' + minutes + seconds + hours;
+
+  document.body.style.background = hexColor;
+
+};
+
+colorClock();
+</script>
+</body>
+</html>
