@@ -50,14 +50,17 @@ table {
     font-family: 'Montserrat';
 		color: rgb(20,20,20);
 		position: relative;
+		width: 100%;
+		overflow-x: hidden;
+		padding-top: 86px;
   }
   .content {
 		background-color: rgba(249,249,249);
-		padding-top: 86px;
+		position: relative;
   }
 	.scrollbutton {
-		width: 10vw;
-		height: 10vw;
+		width: 80px;
+		height: 80px;
 		border: 1px solid black;
 		background-color: white;
 		border-radius: 50%;
@@ -68,6 +71,9 @@ table {
 		display: none;
 		font-size: 3rem;
 		padding: calc(5vw - 3rem);
+	}
+	.scrollbutton:focus {
+		outline: none;
 	}
 	h2 {
     text-align: center;
@@ -100,10 +106,10 @@ table {
 	}
 	p {
     text-align: center;
-    line-height: 2rem;
-		font-size: 1.5rem;
+    line-height: 1.8rem;
+		font-size: 1.3rem;
 		margin-bottom: 2rem;
-		padding: 0 5rem;
+		padding: 0 2rem;
 		color: rgb(50,50,50);
   }
 	a {
@@ -129,6 +135,7 @@ table {
     letter-spacing: 0.2rem;
 		line-height: 2.7rem;
 		padding: 2rem 1rem;
+		width: 100%;
   }
   .title {
 		display: table-cell;
@@ -137,7 +144,7 @@ table {
 	#bg1, #bg2, #bg3, #bg3cpy {
 		width: 100%;
 		position: fixed;
-		top: 0;
+		top: 86px;
 		right: 0;
 		z-index: -1;
 	}
@@ -168,48 +175,61 @@ table {
 		transition: 0.3s ease-in-out;
 	}
 	.clock {
-		color: rgba(20,20,20,.9);
-		position: absolute;
-		top: 1rem;
-		left: 1rem;
-		font-size: 120px;
+		color: rgba(20,20,20);
+		position: fixed;
+		top: 18px;
+		right: 18px;
+		font-size: 48px;
+		z-index: 4;
 	}
-/*==========NAVBAR==========*/
-  nav {
-    height: 86px;
-		padding-left: 4vw;
-		padding-right: 4vw;
-		display: table;
+/*==========MOBILE NAV==========*/
+	.mobilenav {
+		display: block;
 		background-color: white;
-		position: absolute;
+		height: 86px;
+		position: fixed;
+		top: 0;
+		left: 0;
 		width: 100%;
-		z-index: 2;
-  }
-  nav a {
-    text-decoration: none;
-    width: 24vw;
-    font-size: 1.6rem;
-    letter-spacing: 0.1rem;
-    border-bottom: 2px solid rgba(0,0,0,.0);
-    padding: 2rem 0;
-    display: table-cell;
-    text-align: center;
+		z-index: 3;
+	}
+	.mobilenav i {
+		font-size: 50px;
+		position: absolute;
+		top: 18px;
+		left: 18px;
 		cursor: pointer;
 		color: rgb(20,20,20);
-  }
-  button:focus {
-    outline: none;
-  }
-	.current {
-		border-bottom: 3px solid blue;
-		transition: 0.3s ease-in-out;
+		text-align: center;
+		width: 50px;
 	}
-	.shrink {
-		position: fixed;
-    top: 0;
-    transition: .8s all;
-    opacity: .95;
+	.normalnav, .fixednav {
+		display: none;
 		width: 100%;
+		background-color:	white;
+		position: fixed;
+		left: 0;
+		z-index: 3;
+	}
+	.normalnav {
+		top: 86px;
+	}
+	.normalnav a, .fixednav a {
+		text-decoration: none;
+		letter-spacing: 0.1rem;
+		border-bottom: 2px solid rgba(0,0,0,.0);
+		padding: 2rem 0;
+		text-align: center;
+		cursor: pointer;
+		color: rgb(20,20,20);
+		font-size: 1.5rem;
+		font-weight: 500;
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid rgba(150,150,150,.5);
+	}
+	#introButton {
+		border-top:  1px solid rgba(150,150,150,.5);
 	}
 /*==========ABOUT ME==========*/
   .introduction {
@@ -245,7 +265,7 @@ table {
 		padding-bottom: 10vh;
 	}
 	.icons {
-		width: calc(5.5rem * 4 + 2rem * 9);
+		width: calc(5.5rem * 2 + 2rem * 5);
 		margin: auto;
 	}
   .icons i {
