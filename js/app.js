@@ -34,14 +34,17 @@ $(document).ready(function(){
     $(window).on("scroll", function() {
 	     if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
 	        $('#contactButton1').addClass("current");
-          if ($(window).width() < 1000) {
-            $('.scrollbutton').addClass('scrollbuttonup');
-          };
 	       } else {
           $('#contactButton1').removeClass('current');
-          $('.scrollbutton').removeClass('scrollbuttonup');
         };
     });
+    if ($(document).scrollTop() > $("#footer").offset().top) {
+      if ($(window).width() < 1000) {
+        $('.scrollbutton').addClass('scrollbuttonup');
+      };
+    } else {
+      $('.scrollbutton').removeClass('scrollbuttonup');
+    }
   };
 
   $('.scrollbutton').click(function(){

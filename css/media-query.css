@@ -41,6 +41,10 @@
 		footer {
 			height: 8rem;
 		}
+		.scrollbuttonup {
+			bottom: 10rem !important;
+			transition: 0.2s ease-in-out;
+		}
 	}
 	@media screen and (min-width: 800px) {
 		p {

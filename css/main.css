@@ -78,7 +78,7 @@ table {
 		outline: none;
 	}
 	.scrollbuttonup {
-		bottom: 10rem !important;
+		bottom: 22vh !important;
 		transition: 0.2s ease-in-out;
 	}
 	h2 {
@@ -109,6 +109,10 @@ table {
 	#introduction, #photos, #videos, #contact {
 		position: absolute;
 		top: -57px;
+	}
+	#footer {
+		position: absolute;
+		top: -100vh;
 	}
 	p {
     text-align: center;
@@ -304,6 +308,7 @@ table {
 		width: 100%;
 		color: white;
 		display: table;
+		position: relative;
 	}
 	footer p {
 		display: table-cell;
