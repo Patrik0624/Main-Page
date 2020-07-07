@@ -34,8 +34,12 @@ $(document).ready(function(){
     $(window).on("scroll", function() {
 	     if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
 	        $('#contactButton1').addClass("current");
+          if ($(window).width() < 1000) {
+            $('.scrollbutton').addClass('scrollbuttonup');
+          };
 	       } else {
           $('#contactButton1').removeClass('current');
+          $('.scrollbutton').removeClass('scrollbuttonup');
         };
     });
   };
@@ -46,6 +50,7 @@ $(document).ready(function(){
       $('nav .fas').addClass('fa-bars');
       $('nav .fas').removeClass('fa-times');
       $('.normalnav').fadeOut(300);
+      $('.mobilenav').removeClass('navopacity');
     };
   });
 
@@ -65,17 +70,19 @@ $(document).ready(function(){
   $('nav .fas').click(function(){
     $('nav .fas').toggleClass('fa-bars');
     $('nav .fas').toggleClass('fa-times');
+    $('.mobilenav').toggleClass('navopacity');
     $('.normalnav').toggle('swing');
   });
+
   if ($(window).width() < 1000) {
     $('.normalnav a').click(function(){
       $('.normalnav').fadeOut(300);
       $('nav .fas').addClass('fa-bars');
       $('nav .fas').removeClass('fa-times');
+      $('.mobilenav').removeClass('navopacity');
     });
   };
 });
-
 $(document).ready(function looper() {
     $('#bg1').css('right', '-100%');
     $('#bg2').css('right', '-100%');
