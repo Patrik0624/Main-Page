@@ -124,7 +124,11 @@ table {
   }
 	a {
 		text-decoration: none;
-		color: #0000CD;
+		color: black;
+		font-weight: 500;
+	}
+	a:hover {
+		color: rgb(100,100,100);
 	}
 /*==========HEADER==========*/
   header {
@@ -145,6 +149,7 @@ table {
     letter-spacing: 0.1rem;
 		line-height: 1.4rem;
 		padding: 1rem;
+		width: 100%;
   }
   .title {
 		display: table-cell;
