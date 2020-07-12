@@ -16,6 +16,12 @@
 			width: 25vw;
 			margin: 1rem;
 		}
+		.focusedphoto {
+			width: calc(76vw + 4rem) !important;
+		}
+		.focusedphoto:hover {
+			margin: 1rem !important;
+		}
 		.mobilenav {
 			height: 86px;
 		}
@@ -105,6 +111,9 @@
 		.photos img {
 			width: 10rem;
 			margin: 1rem;
+		}
+		.focusedphoto {
+			width: 34.5rem !important;
 		}
 		.scrollbutton {
 			width: 5rem;
@@ -232,6 +241,9 @@
     .photos img {
       width: 13rem;
     }
+		.focusedphoto {
+			width: 58.7rem !important;
+		}
     .photos img:hover {
       width: 14rem;
       transition: 0.3s ease-in-out;

@@ -268,7 +268,13 @@ table {
   .photos img {
     width: 28vw;
     margin: 1vw;
+		transition: 0.2s ease-in-out;
+		cursor: pointer;
   }
+	.focusedphoto {
+		width: 86vw;
+		transition: 0.2s ease-in-out;
+	}
 /*==========VIDEOS==========*/
 	iframe {
 		width: 80vw;
