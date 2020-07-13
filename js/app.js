@@ -85,20 +85,6 @@ $(document).ready(function(){
       $('.mobilenav').removeClass('navopacity');
     });
   };
-
-  $ DEAKTIVÁLVA ('.photos img').click(function(){
-    $(this).toggleClass('focusedphoto');
-    if ($('.2').hasClass('focusedphoto')) {
-      $(this).prev().insertAfter(this);
-    } else if (!$('.2').hasClass('focusedphoto')) {
-      $(this).next().insertBefore(this);
-    };
-    if ($('.3').hasClass('focusedphoto')) {
-      $(this).next().insertBefore(this);
-    } else if (!$('.3').hasClass('focusedphoto')) {
-      $(this).prev().insertAfter(this);
-    };
-  });
 });
 $(document).ready(function looper() {
     $('#bg1').css('right', '-100%');
