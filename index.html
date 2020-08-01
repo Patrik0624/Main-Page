@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/401c4fe106.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/app.js" async charset="utf-8"></script>
   </head>
   <body>
     <header>
@@ -22,7 +22,6 @@
       <div class="title">
         <h1>Üdvözöllek a Weboldalamon!</h1>
       </div>
-      <a class="clock" href="https://lestarpatrik.com/color-clock"><i class="fas fa-clock"></i></a>
       <div class="points">
         <div class="point1"></div>
         <div class="point2"></div>
@@ -50,27 +49,27 @@
         <h2>Fotók</h2>
         <p>Itt látható pár, a kedvenc fényképeim közül. Ha tetszenek, tekintsd meg az <a href="https://www.instagram.com/lestarpatrik/" target="_blank">Instagramomat</a>, ahol több fotó is található és kövess be, ha szeretnél találkozni a legújabbakal is!</p>
         <div class="pictures">
-          <img class="normal" src="assets/photos/1.jpg">
-          <img class="normal" src="assets/photos/2.jpg">
-          <img class="normal" src="assets/photos/3.jpg">
-          <img class="normal" src="assets/photos/4.jpg">
-          <img class="normal" src="assets/photos/5.jpg">
-          <img class="normal" src="assets/photos/6.jpg">
-          <img class="normal" src="assets/photos/7.jpg">
-          <img class="normal" src="assets/photos/8.jpg">
-          <img class="normal" src="assets/photos/9.jpg">
-          <img class="normal" src="assets/photos/10.jpg">
-          <img class="normal" src="assets/photos/11.jpg">
-          <img class="normal" src="assets/photos/12.jpg">
-          <img class="normal" src="assets/photos/13.jpg">
-          <img class="normal" src="assets/photos/14.jpg">
-          <img class="normal" src="assets/photos/15.jpg">
-          <img class="normal" src="assets/photos/16.jpg">
-          <img class="normal" src="assets/photos/17.jpg">
-          <img class="normal" src="assets/photos/18.jpg">
-          <img class="normal" src="assets/photos/19.jpg">
-          <img class="normal" src="assets/photos/20.jpg">
-          <img class="last normal" src="assets/photos/21.jpg">
+          <img id="1" src="assets/photos/1.jpg">
+          <img id="2" src="assets/photos/2.jpg">
+          <img id="3" src="assets/photos/3.jpg">
+          <img id="4" src="assets/photos/4.png">
+          <img id="5" src="assets/photos/5.png">
+          <img id="6" src="assets/photos/6.jpg">
+          <img id="7" src="assets/photos/7.jpg">
+          <img id="8" src="assets/photos/8.jpg">
+          <img id="9" src="assets/photos/9.jpg">
+          <img id="10" src="assets/photos/10.jpg">
+          <img id="11" src="assets/photos/11.jpg">
+          <img id="12" src="assets/photos/12.jpg">
+          <img id="13" src="assets/photos/13.jpg">
+          <img id="14" src="assets/photos/14.jpg">
+          <img id="15" src="assets/photos/15.jpg">
+          <img id="16" src="assets/photos/16.jpg">
+          <img id="17" src="assets/photos/17.jpg">
+          <img id="18" src="assets/photos/18.jpg">
+          <img id="19" src="assets/photos/19.jpg">
+          <img id="20" src="assets/photos/20.jpg">
+          <img id="21" class="last" src="assets/photos/21.jpg">
         </div>
       </div>
       <div class="video">
@@ -116,5 +115,38 @@
       <a id="contactButton1">Elérhetőség</a>
     </nav>
     <button class="scrollbutton" type="button" name="scrollTop"><i class="fas fa-angle-up"></i></button>
+    <div class="photoviewerpanel">
+      <a class="closephoto"><i class="fas fa-times"></i></a>
+      <div class="photoviewer">
+        <img class="focusedphoto" src="assets/photos/1.jpg">
+        <div class="photoselector">
+          <img id="s1" src="assets/photos/1.jpg">
+          <img id="s2" src="assets/photos/2.jpg">
+          <img id="s3" src="assets/photos/3.jpg">
+          <img id="s4" src="assets/photos/4.png">
+          <img id="s5" src="assets/photos/5.png">
+          <img id="s6" src="assets/photos/6.jpg">
+          <img id="s7" src="assets/photos/7.jpg">
+          <img id="s8" src="assets/photos/8.jpg">
+          <img id="s9" src="assets/photos/9.jpg">
+          <img id="s10" src="assets/photos/10.jpg">
+          <img id="s11" src="assets/photos/11.jpg">
+          <img id="s12" src="assets/photos/12.jpg">
+          <img id="s13" src="assets/photos/13.jpg">
+          <img id="s14" src="assets/photos/14.jpg">
+          <img id="s15" src="assets/photos/15.jpg">
+          <img id="s16" src="assets/photos/16.jpg">
+          <img id="s17" src="assets/photos/17.jpg">
+          <img id="s18" src="assets/photos/18.jpg">
+          <img id="s19" src="assets/photos/19.jpg">
+          <img id="s20" src="assets/photos/20.jpg">
+          <img id="s21" src="assets/photos/21.jpg">
+        </div>
+        <a class="slider-next sliderbutton arrow right"><i class="fas fa-chevron-right"></i></a>
+        <a class="slider-prev sliderbutton arrow left"><i class="fas fa-chevron-left"></i></a>
+        <a class="next nextprev arrow bigger"><i class="fas fa-chevron-right"></i></a>
+        <a class="prev nextprev arrow bigger"><i class="fas fa-chevron-left"></i></a>
+      </div>
+    </div>
   </body>
 </html>

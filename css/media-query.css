@@ -16,12 +16,6 @@
 			width: 25vw;
 			margin: 1rem;
 		}
-		.focusedphoto {
-			width: calc(76vw + 4rem) !important;
-		}
-		.focusedphoto:hover {
-			margin: 1rem !important;
-		}
 		.mobilenav {
 			height: 86px;
 		}
@@ -29,11 +23,6 @@
 			font-size: 50px;
 			top: 18px;
 			left: 18px;
-		}
-		.clock {
-			font-size: 50px;
-			top: 18px;
-			right: 18px;
 		}
 		.normalnav {
 			top: 86px;
@@ -50,6 +39,44 @@
 		.scrollbuttonup {
 			bottom: 10rem !important;
 			transition: 0.2s ease-in-out;
+		}
+		.focusedphoto {
+			width: 30rem;
+			left: calc(50% - 15rem);
+		}
+		.photoselector {
+			width: 30.4rem;
+			margin-left: -0.4rem;
+			left: calc(50% - 15rem);
+			bottom: calc(50% - 15rem - (30rem / 6 - 0.4rem) / 2 - 0.6rem);
+			height: calc(28rem / 6 + 2px);
+			z-index: 10;
+		}
+		.photoselector img {
+			width: calc(28rem / 6);
+		}
+		.nextprev {
+			top: calc(50% - 15rem - (30rem / 6 - 0.4rem) / 2 + 15rem);
+		}
+		.sliderbutton {
+			bottom: calc(50% - 15rem - (30rem / 6 - 0.4rem) / 2 - 0.6rem);
+		}
+		.slider-prev {
+			left: calc(50% - 19rem);
+		}
+		.slider-next {
+			right: calc(50% - 19rem);
+		}
+		.next {
+			right: calc(50% - 14.5rem);
+		}
+		.prev {
+			left: calc(50% - 14.5rem);
+		}
+		.photoviewer {
+			width: 30rem;
+			height: calc(30.4rem + (28rem / 6 + 2px));
+			top: calc(50% - 15rem - (30rem / 6 - 0.4rem) / 2);
 		}
 	}
 	@media screen and (min-width: 800px) {
@@ -77,22 +104,6 @@
 		header h1 {
 			font-size: 2.3rem;
 		}
-		.clock {
-			color: rgba(20,20,20,.9);
-			top: 1rem;
-			left: 1rem;
-			position: absolute;
-			width: 0;
-		}
-		.clock:hover {
-			font-size: 56px;
-			top: 0.75rem;
-			left: 0.75rem;
-			transition: 0.1s ease-in-out;
-		}
-		.clock:not(:hover) {
-			transition: 0.1s ease-in-out;
-		}
 		.introduction h2, .photos h2 {
 			font-size: 1.5rem;
 		}
@@ -111,9 +122,6 @@
 		.photos img {
 			width: 10rem;
 			margin: 1rem;
-		}
-		.focusedphoto {
-			width: 34.5rem !important;
 		}
 		.scrollbutton {
 			width: 5rem;
@@ -170,8 +178,24 @@
 		a:hover {
 			color: rgb(100,100,100);
 		}
-		.clock:hover {
-			color: rgb(20,20,20);
+		.left:hover {
+			margin-left: -0.3rem;
+			transition: 0.2s ease-in-out;
+		}
+		.right:hover {
+			margin-right: -0.3rem;
+			transition: 0.2s ease-in-out;
+		}
+		.bigger:hover {
+			background-color: rgba(255,255,255,.9);
+			transition: 0.2s ease-in-out;
+			padding: 1rem;
+			margin-top: -1rem;
+		}
+		.closephoto:hover {
+			transition: 0.50s;
+			transform: rotate(180deg);
+			color: rgb(10,10,10);
 		}
 		/*==========NAVBAR==========*/
 			.mobilenav {
@@ -241,9 +265,6 @@
     .photos img {
       width: 13rem;
     }
-		.focusedphoto {
-			width: 58.7rem !important;
-		}
     .photos img:hover {
       width: 14rem;
       transition: 0.3s ease-in-out;
